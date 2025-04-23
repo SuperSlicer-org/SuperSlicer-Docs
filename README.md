@@ -17,7 +17,7 @@ Install Mkdocs and Material for Mkdocs
 
 Mac:
 ```
-brew install mkdocs mkdocs-material
+brew install mkdocs-material
 ```
 
 Running Mkdocs 
