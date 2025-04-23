@@ -1,0 +1,95 @@
+site_name: SuperSlicer
+site_author: SuperSlicer Dev Team
+site_description: 'SuperSlicer Documentation, installation, features, usage'
+site_url: https://docs.superslicer.org/
+copyright: 'SuperSlicer is released under the GNU Affero General Public License – V:3.0'
+use_directory_urls: true
+nav:
+  - Home: index.md
+  - Getting Started:
+    - getting-started/index.md
+    - Installation: getting-started/installation.md
+    - Initial Configuration: getting-started/initial-config.md
+    - Navigating the UI: getting-started/ui-nav.md
+    - Preferences: getting-started/preferences.md
+  - Slicer Settings Reference:
+    - Print Settings: 
+      - slicer-settings/print/index.md
+      - Perimiters and Shell: slicer-settings/print/perimiter-shell.md
+      - Slicing: slicer-settings/print/slicing.md
+      - Infill: slicer-settings/print/infill.md
+      - Skirts and Brim: slicer-settings/print/skirts-brim.md
+      - Support Material: slicer-settings/print/support-material.md
+      - Speed: slicer-settings/print/speed.md
+      - Width and Flow: slicer-settings/print/width-flow.md
+      - Multiple Extruders: slicer-settings/print/multiple-extruders.md
+      - Output options: slicer-settings/print/output-options.md
+      - Notes: slicer-settings/print/notes.md
+      - Dependencies: slicer-settings/print/dependencies.md
+    - Filament Settings:
+      - slicer-settings/filament/index.md
+    - Printer Settings:
+      - slicer-settings/printer/index.md
+    - Per-Object Settings:
+      - slicer-settings/per-object/index.md
+  - Additional Information:
+    #- Compiling SuperSlicer: additional-info/compiling.md
+    - Command Line Guide: additional-info/cmd-line-guide.md
+  #- FAQ: faq.md
+  #- Change Log:
+  #  - changelog/index.md
+  - About: about.md
+repo_url: https://github.com/supermerill/SuperSlicer/
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/4TVUG4VRzP
+      name: SuperSlicer Discord
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  logo: assets/SuperSlicer.png
+  font: false
+  color_mode: auto
+  user_color_mode_toggle: true
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
+
