@@ -1,5 +1,8 @@
-# Extrusion width
+# Width & Flow
 
-# Overlap
+## Extrusion width
+![Image Speed for print moves](assets/extrusion_width.png)
 
-# Flow
+## Overlap
+
+## Flow
