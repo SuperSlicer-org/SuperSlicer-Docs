@@ -1,5 +1,13 @@
-# About SuperSlicer
+---
+title: About SuperSlicer
+description: About SuperSlicer 
+hide:
+  - navigation
+  #- toc.integrate
+  #- path
+---
 
+# About SuperSlicer
 
 ## Development
 

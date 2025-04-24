@@ -1,3 +1,12 @@
+---
+title: SuperSlicer Preferences
+description: SuperSlicer preferences. Description of each setting
+hide:
+  #- navigation
+  #- toc.integrate
+  #- path
+---
+
 # Preferences
 
 SuperSlicer Preferences.
@@ -108,7 +117,10 @@ Parameter name: autocenter
 
 ### Dark Mode
 
-Note: This is only available on Windows. Linux and MacOS follow the system setting for Dark/Light mode for the application
+!!! note
+
+    This is only available on Windows.
+    Linux and MacOS follow the system setting for Dark/Light mode for the application
 
 ![Image Notes](assets/preferences/dark_mode.png)
 
