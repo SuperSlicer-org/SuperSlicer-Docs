@@ -7,10 +7,10 @@ use_directory_urls: true
 nav:
   - Home: index.md
   - Getting Started:
-    - getting-started/index.md
+    #- getting-started/index.md
     - Installation: getting-started/installation.md
-    - Initial Configuration: getting-started/initial-config.md
-    - Navigating the UI: getting-started/ui-nav.md
+    #- Initial Configuration: getting-started/initial-config.md
+    #- Navigating the UI: getting-started/ui-nav.md
     - Preferences: getting-started/preferences.md
   - Slicer Settings Reference:
     - Print Settings: 
@@ -35,9 +35,7 @@ nav:
   - Additional Information:
     #- Compiling SuperSlicer: additional-info/compiling.md
     - Command Line Guide: additional-info/cmd-line-guide.md
-  #- FAQ: faq.md
-  #- Change Log:
-  #  - changelog/index.md
+  - Releases: releases.md
   - About: about.md
 repo_url: https://github.com/supermerill/SuperSlicer/
 plugins:
@@ -51,11 +49,14 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/4TVUG4VRzP
       name: SuperSlicer Discord
+    - icon: fontawesome/brands/github
+      link: https://github.com/supermerill/SuperSlicer/
+      name: SuperSlicer Github
 theme:
   name: material
   favicon: assets/favicon.ico
   logo: assets/SuperSlicer.png
-  font: false
+  #font: false
   color_mode: auto
   user_color_mode_toggle: true
   palette:
