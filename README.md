@@ -30,3 +30,7 @@ mkdocs serve
 You can preview the documentation site at http://127.0.0.1:8000
 
 The preview site will live update any changes made.
+
+## References
+
+[Mkdocs Material Refence Guide: https://squidfunk.github.io/mkdocs-material/reference/](https://squidfunk.github.io/mkdocs-material/reference/)
