@@ -9,6 +9,8 @@ hide:
 
 # Releases
 
+Below are the latest stable and development releases for download. Additional releases can be found on the [SuperSlicer Github releases](https://github.com/supermerill/SuperSlicer/releases) page.
+
 ---
 
 ## Stable Release (2.5.59.13)
