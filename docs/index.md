@@ -10,7 +10,9 @@ search:
 
 # SuperSlicer
 
-**A PrusaSlicer fork (which is a slic3r fork)** (previously Slic3r++)
+**SuperSlicer is a PrusaSlicer fork (which is a slic3r fork)** (previously Slic3r++)
+
+![Image SuperSlicer](assets/SuperSlicer-Screenshot.png)
 
 ### What are SuperSlicer main features? main new features/differences?
 
