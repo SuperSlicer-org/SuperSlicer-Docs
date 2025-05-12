@@ -38,25 +38,28 @@ SHA256 Checksum: `332dfbb7046fc12c1936900be2a85ce0f13031b381edf266f8c6d08d94730d
 
 ---
 
-## Latest Development Release (2.7.61.2 Beta)
+## Latest Development Release (2.7.61.3 Beta)
 
 Release notes can be found on the github release page for this version:
 
-[https://github.com/supermerill/SuperSlicer/releases/tag/2.7.61.2](https://github.com/supermerill/SuperSlicer/releases/tag/2.7.61.2)
+[https://github.com/supermerill/SuperSlicer/releases/tag/2.7.61.3](https://github.com/supermerill/SuperSlicer/releases/tag/2.7.61.3)
 
 ---
 
-[Windows](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.2/SuperSlicer_2.7.61.2_win64_250422.zip)
-SHA256 Checksum: `6a0b955fffbb883e95d24884e8142ce437272fcf3587bb26fd41b4a1215c6c85`
+[Windows](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.3/SuperSlicer_2.7.61.3_win64_250512.zip)
+SHA256 Checksum: `a98f235fb7364a5dece6fd8e1b130608306defa280ceef3a27f222b9091364d1`
 
-[Mac Arm](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.2/SuperSlicer_2.7.61.2_macos_arm_250422.dmg)
-SHA256 Checksum: `af59280a1e0efea2e74e7824fdb81daa51f35bfed5fb0d1007b887eafebb0e56`
+[Mac Arm](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.3/SuperSlicer_2.7.61.3_macos_arm_250512.dmg)
+SHA256 Checksum: `1faab27d44758d551aaaac12eccbe4439dd478cd71af9fa91aae5b5867b81e55`
 
-[Mac Intel](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.2/SuperSlicer_2.7.61.2_macos_250422.dmg)
-SHA256 Checksum: `af2ac5be5fb4773c8519128801c94a3f5a48d3b4a425fa013b65efdfba05115a`
+[Mac Intel](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.3/SuperSlicer_2.7.61.3_macos_250512.dmg)
+SHA256 Checksum: `e0e57a7192a4fc049b0269b53e5f9c3757926fbd8fd3e20fbed6abf9be1bf8e3`
 
-[Linux AppImage](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.2/SuperSlicer-ubuntu_20.04-2.7.61.2.AppImage)
-SHA256 Checksum: `e4167886cd7d59f51659c58e68324772a67d9731ad97fa1108d20c1ecd5306cc`
+[Linux AppImage](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.3/SuperSlicer-ubuntu_22.04-2.7.61.3.AppImage)
+SHA256 Checksum: `61b1cfe6aeadfd7bebb7aae5b1da17ac8f76cd2a1a50e802f6b2370650ebbce3`
+
+[Linux Tarball](https://github.com/supermerill/SuperSlicer/releases/download/2.7.61.3/SuperSlicer_2.7.61.3_linux64_250512.tgz)
+SHA256 Checksum: `3dd40b97bfc9de31a80eb47ad9b0bfc47faad691966ba81d9828dbd5fadd3d4e`
 
 ---
 
