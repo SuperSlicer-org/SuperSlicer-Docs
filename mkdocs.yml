@@ -5,7 +5,7 @@ site_url: https://docs.superslicer.org/
 copyright: 'SuperSlicer is released under the GNU Affero General Public License – V:3.0'
 use_directory_urls: true
 nav:
-  - Home: index.md
+  #- Home: index.md
   - Getting Started:
     #- getting-started/index.md
     - Installation: getting-started/installation.md
