@@ -13,8 +13,9 @@ nav:
     #- Navigating the UI: getting-started/ui-nav.md
     - Preferences: getting-started/preferences.md
   - Slicer Settings Reference:
+    - slicer-settings/index.md
     - Print Settings: 
-      - slicer-settings/print/index.md
+      #- slicer-settings/print/index.md
       - Perimiters and Shell: slicer-settings/print/perimiter-shell.md
       - Slicing: slicer-settings/print/slicing.md
       - Infill: slicer-settings/print/infill.md
@@ -32,9 +33,11 @@ nav:
       - slicer-settings/printer/index.md
     - Per-Object Settings:
       - slicer-settings/per-object/index.md
-  - Additional Information:
-    #- Compiling SuperSlicer: additional-info/compiling.md
-    - Command Line Guide: additional-info/cmd-line-guide.md
+  - Advanced Usage Guides:
+    - advanced-usage-guides/index.md
+    #- Compiling SuperSlicer: advanced-usage-guides/compiling.md
+    - Command Line Guide: advanced-usage-guides/cmd-line-guide.md
+    - Using Custom Variables: advanced-usage-guides/using-custom-variables.md
   - Releases: releases.md
   - About: about.md
 repo_url: https://github.com/supermerill/SuperSlicer/
