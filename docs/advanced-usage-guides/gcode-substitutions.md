@@ -1,3 +1,13 @@
+---
+title: G-code substitutions
+description: SuperSlicer documentation - G-code substitutions
+# hide:
+  # - navigation
+  #- toc
+# search:
+#   exclude: true
+---
+
 # G-code substitutions
 
 SuperSlicer offers simple G-Code post-processing by specifying find and replace pairs, with optional regex matching, case sensitivity and whole word matching, similar to what common text editors offer. Regular expressions are very powerful and versatile tool that allows to set up even quite complicated substitutions. If you need more complicated post-processing, it is possible to use an [external post-processing script](post-processing-scripts.md) instead.
