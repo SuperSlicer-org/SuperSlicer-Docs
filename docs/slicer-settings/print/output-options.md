@@ -30,9 +30,9 @@
 ## Other
 ![image Other](assets/other.png)
 
-| Parameter                                   | Parameter Name | Parameter CLI flag | Description                                                                                  | Default Value |
-| ------------------------------------------- | -------------- | ------------------ | -------------------------------------------------------------------------------------------- | ------------- |
-| [G-code substitutions](../../../advanced-usage-guides/gcode-substitutions.md) | notes          | --notes            | Here you can put your personal notes. This text will be added to the G-code header comments. | default: ""   |
+| Parameter                                                          | Parameter Name | Parameter CLI flag | Description                                                                                  | Default Value |
+| ------------------------------------------------------------------ | -------------- | ------------------ | -------------------------------------------------------------------------------------------- | ------------- |
+| [G-code substitutions](/advanced-usage-guides/gcode-substitutions) | notes          | --notes            | Here you can put your personal notes. This text will be added to the G-code header comments. | default: ""   |
 
 ## Post-processing script
 ![image Post-processing script](assets/post-processing-script.png)
