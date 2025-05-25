@@ -10,4 +10,10 @@ search:
 
 # Advanced usage guides
 
+[Command line guide](cmd-line-guide.md)
+
+[G-code substitutions](gcode-substitutions.md)
+
+[Post-processing scripts](post-processing-scripts.md)
+
 [Using custom variables](using-custom-variables.md)
