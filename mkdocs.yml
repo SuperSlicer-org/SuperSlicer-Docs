@@ -37,6 +37,8 @@ nav:
     - advanced-usage-guides/index.md
     #- Compiling SuperSlicer: advanced-usage-guides/compiling.md
     - Command Line Guide: advanced-usage-guides/cmd-line-guide.md
+    - G-code substitutions: advanced-usage-guides/gcode-substitutions.md
+    - Post-processing scripts: advanced-usage-guides/post-processing-scripts.md
     - Using Custom Variables: advanced-usage-guides/using-custom-variables.md
   - Releases: releases.md
   - About: about.md
