@@ -8,3 +8,6 @@ hide:
 search:
   exclude: true
 ---
+
+# Initial Configuration
+
