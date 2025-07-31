@@ -14,7 +14,7 @@ search:
 
 SuperSlicer is an open-source slicing software designed for 3D printing enthusiasts who seek advanced control over their print settings. It is a fork of PrusaSlicer, which itself is based on Slic3r, and incorporates several powerful features and expanded functionalities that cater specifically to users requiring precise slicer controls and advanced pathing for 3D printing .
 
-Head over to the [releases page](releases.md) to grab the latest version!
+Head over to the [releases page](releases.md) to learn all the latest gossip on all of our releases!
 
 
 ### What are SuperSlicer main features?
