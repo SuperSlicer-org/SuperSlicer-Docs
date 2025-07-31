@@ -42,7 +42,6 @@ nav:
     - Using Custom Variables: advanced-usage-guides/using-custom-variables.md
   - Releases: releases.md
   - About: about.md
-repo_url: https://github.com/supermerill/SuperSlicer/
 plugins:
   - search
 markdown_extensions:
@@ -54,9 +53,6 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/4TVUG4VRzP
       name: SuperSlicer Discord
-    - icon: fontawesome/brands/github
-      link: https://github.com/supermerill/SuperSlicer/
-      name: SuperSlicer Github
 theme:
   name: material
   favicon: assets/favicon.ico
