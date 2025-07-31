@@ -33,7 +33,7 @@ Moving forward, BEFORE an issue is opened on our GitHub it must first be discuss
 
 ## New Feature Requests
 
-If you would like to request a feature be added to SuperSlicer, then please surf to the [Request-and Sponsor a Feature](https://www.superslicer.org/sponsorship/request-and-sponsor-a-feature/) page of our website. At the bottom of this page you will find a form you can fill out to submit your New Feature Request.
+If you would like to request a feature be added to SuperSlicer, then please surf to the [Request and Sponsor a Feature](https://www.superslicer.org/sponsorship/request-and-sponsor-a-feature/) page of our website. At the bottom of this page you will find a form you can fill out to submit your New Feature Request.
 
 ## License and Attribution
 
