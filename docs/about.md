@@ -15,7 +15,7 @@ hide:
 
 Almost everything is written in C++.
 
-The slicing core is the `libslic3r` library, which can be built and used in a standalone way. The command-line interface is a thin wrapper over `libslic3r`. You can download a precompiled package from the release page - it will run without the need for any dependency.
+The slicing core is the `libslic3r` library, which can be built and used in a standalone way. The command-line interface is a thin wrapper over `libslic3r`. You can download SuperSlicer from the [links](https://www.superslicer.org/resources/links/) page on our website.
 
 ### Can I help?
 
