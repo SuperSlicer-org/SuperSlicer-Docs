@@ -19,7 +19,7 @@ The slicing core is the `libslic3r` library, which can be built and used in a st
 
 ### Can I help?
 
-Sure! There is two ways to get involved. First engage our team in our Discord and share with them how you believe you might be helpful. The second way is to surf to our website and submit the from requesting to join one of our QA Teams.
+Sure! There is two ways to get involved. First engage our team in our Discord and share with them how you believe you might be helpful. The second way is to surf to our [website](https://www.superslicer.org) and submit the from requesting to join one of our [QA Teams](https://www.superslicer.org/superslicer-v2-7-x-alpha-beta-qa-production-teams/).
 ## License and attribution
 
 SuperSlicer is licensed under the _GNU Affero General Public License, version 3_. SuperSlicer is based on PrusaSlicer by PrusaResearch.
