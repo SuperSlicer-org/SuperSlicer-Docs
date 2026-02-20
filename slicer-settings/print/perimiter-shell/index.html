@@ -1,0 +1,2461 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SuperSlicer Perimeter and Shells print settings">
+      
+      
+        <meta name="author" content="SuperSlicer Dev Team">
+      
+      
+        <link rel="canonical" href="https://docs.superslicer.org/slicer-settings/print/perimiter-shell/">
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../slicing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Perimiters and Shells - SuperSlicer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#perimiters-and-shells" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="SuperSlicer" class="md-header__button md-logo" aria-label="SuperSlicer" data-md-component="logo">
+      
+  <img src="../../../assets/SuperSlicer.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SuperSlicer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Perimiters and Shells
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/supermerill/SuperSlicer/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Slicer Settings Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../advanced-usage-guides/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Advanced Usage Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../releases/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Releases
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SuperSlicer" class="md-nav__button md-logo" aria-label="SuperSlicer" data-md-component="logo">
+      
+  <img src="../../../assets/SuperSlicer.png" alt="logo">
+
+    </a>
+    SuperSlicer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/supermerill/SuperSlicer/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/preferences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preferences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slicer Settings Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Slicer Settings Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print Settings
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Print Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perimiters and Shell
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perimiters and Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vertical-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertical Shells
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizontal Shells
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avoid-crossing-perimeters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avoid Crossing Perimeters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overhangs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overhangs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seam
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gap-fill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gap Fill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-perimeter-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External perimeter first
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arachne-perimeter-generator-variable-width" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arachne perimeter generator (variable width)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slicing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slicing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../skirts-brim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Skirts and Brim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support-material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support Material
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../speed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Speed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../width-flow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Width and Flow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiple-extruders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multiple Extruders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Output options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependencies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../filament/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament Settings
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Filament Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../printer/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Printer Settings
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Printer Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../per-object/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Per-Object Settings
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Per-Object Settings
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../advanced-usage-guides/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Usage Guides
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced Usage Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced-usage-guides/cmd-line-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command Line Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced-usage-guides/gcode-substitutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    G-code substitutions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced-usage-guides/post-processing-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Post-processing scripts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced-usage-guides/using-custom-variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Custom Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../releases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Releases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Slicer Settings Reference
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Print Settings
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="perimiters-and-shells">Perimiters and Shells</h1>
+<h2 id="vertical-shells">Vertical Shells</h2>
+<p><img alt="image Vertical Shells" src="../assets/vertical_shells.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perimiters - Contour</td>
+<td>perimeters</td>
+<td>--perimeters</td>
+<td>This option sets the number of perimeters to generate for each layer. If perimeters_hole is activated, then this number is only for contour perimeters. Note that if a contour perimeter encounter a hole, it will go around like a hole perimeter. Note that SuperSlicer may increase this number automatically when it detects sloping surfaces which benefit from a higher number of perimeters if the Extra Perimeters option is enabled.</td>
+<td>default: 3</td>
+</tr>
+<tr>
+<td>Perimiters - Holes</td>
+<td>perimeters_hole</td>
+<td>--perimeters-hole</td>
+<td>This option sets the number of perimeters to have over holes. Note that if a hole-perimeter fuse with the contour, then it will go around like a contour perimeter. If disabled, holes will have the same number of perimeters as contour. Cannot be enabled at the same time as Arachne generator. Note that SuperSlicer may increase this number automatically when it detects sloping surfaces which benefit from a higher number of perimeters if the Extra Perimeters option is enabled.</td>
+<td>default: !0</td>
+</tr>
+<tr>
+<td>Wall Thickness</td>
+<td>s_wall_thickness</td>
+<td></td>
+<td>Changes the perimeter extrusion widths to ensure there is an exact number of perimeters for this wall thickness value. It won't put the perimeter width below the nozzle diameter, and up to double. Note that the value displayed is just a view of the current perimeter thickness, like the info text below. The number of perimeters to compute this value is one loop, or the custom variable 'wall_thickness_lines' (advanced mode) if defined. <br>If the value is too low, it will revert the widths to the saved value.<br>If the value is 0, it will show 0.</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Perimeter Generator:</td>
+<td>perimeter_generator</td>
+<td>--perimeter-generator</td>
+<td>Classic perimeter generator produces perimeters with constant extrusion width and for very thin areas is used gap-fill. Arachne engine produces perimeters with variable extrusion width. This setting also affects the Concentric infill. (classic, arachne)</td>
+<td>default: classic</td>
+</tr>
+<tr>
+<td>Spiral vase:</td>
+<td>spiral_vase</td>
+<td>--spiral-vase</td>
+<td>This feature will raise Z gradually while printing a single-walled object in order to remove any visible seam. This option requires no infill, no top solid layers and no support material. You can still set any number of bottom solid layers as well as skirt/brim loops. After the bottom solid layers, the number of perimeters is enforce to 1.It won't work when printing more than one single object.</td>
+<td>default: false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="horizontal-shells">Horizontal Shells</h2>
+<p><img alt="image Horizontal Shells" src="../assets/horizontal_shells.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solid Layers - Top</td>
+<td>top_solid_layers</td>
+<td>--top-solid-layers</td>
+<td>Number of solid layers to generate on top surfaces.</td>
+<td>default: 3</td>
+</tr>
+<tr>
+<td>Solid Layers - Bottom</td>
+<td>bottom_solid_layers</td>
+<td>--bottom-solid-layers</td>
+<td>Number of solid layers to generate on bottom surfaces.</td>
+<td>default: 3</td>
+</tr>
+<tr>
+<td>Minimum shell  thickness - Top</td>
+<td>top_solid_min_thickness</td>
+<td>--top-solid-min-thickness</td>
+<td>The number of top solid layers is increased above top_solid_layers if necessary to satisfy minimum thickness of top shell. This is useful to prevent pillowing effect when printing with variable layer height. (mm)<br><br></td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Minimum shell  thickness - Bottom</td>
+<td>bottom_solid_min_thickness</td>
+<td>--bottom-solid-min-thickness</td>
+<td>The number of bottom solid layers is increased above bottom_solid_layers if necessary to satisfy minimum thickness of bottom shell. (mm)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>No solid infill over - Perimiters</td>
+<td>solid_over_perimeters</td>
+<td>--solid-over-perimeters</td>
+<td>In sloping areas, when you have a number of top / bottom solid layers and few perimeters, it may be necessary to put some solid infill above/below the perimeters to fulfill the top/bottom layers criteria. By setting this to something higher than 0, you can control this behaviour, which might be desirable if undesirable solid infill is being generated on slopes. The number set here indicates the number of layers between the inside of the part and the air at and beyond which solid infill should no longer be added above/below. If this setting is equal or higher than the top/bottom solid layer count, it won't do anything. If this setting is set to 1, it will evict all solid fill above/below perimeters. Set zero to disable. (perimeters)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Ensure vertical shell thickness</td>
+<td>ensure_vertical_shell_thickness</td>
+<td>--ensure-vertical-shell-thickness</td>
+<td>Add solid infill near sloping surfaces to guarantee the vertical shell thickness<br>(top+bottom solid layers). (disabled, partial, enabled, enabled_old)</td>
+<td>default: enabled_old</td>
+</tr>
+<tr>
+<td>Enforce 100% fill volume</td>
+<td>enforce_full_fill_volume</td>
+<td>--enforce-full-fill-volume</td>
+<td>Experimental option which modifies (in solid infill) fill flow to have the exact amount of plastic inside the volume to fill (it generally changes the flow from -7% to +4%, depending on the size of the surface to fill and the overlap  parameters, but it can go as high as +50% for infill in very small areas where rectilinear doesn't have good coverage). It has the advantage to remove the over-extrusion seen in thin infill areas, from the overlap ratio</td>
+<td>default: true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quality">Quality</h2>
+<p><img alt="image Quality" src="../assets/quality.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Only one perimeter (On first layer)</td>
+<td>only_one_perimeter_first_layer</td>
+<td>--only-one-perimeter-first-layer</td>
+<td>Use only one perimeter on first layer, to give more space to the top infill pattern.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Only one perimeter (On top surfaces)</td>
+<td>only_one_perimeter_top</td>
+<td>--only-one-perimeter-top</td>
+<td>Use only one perimeter on flat top surface, to give more space to the top infill pattern.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Only one perimeter (Minimum width)</td>
+<td>min_width_top_surface</td>
+<td>--min-width-top-surface</td>
+<td>If a top surface has to be printed and it's partially covered by another layer, it won't be considered at a top layer where its width is below this value. This can be useful to not let the 'one perimeter on top' trigger on surface that should be covered only by perimeters. This value can be a mm or a % of the perimeter extrusion width. Warning: If enabled, artifacts can be created is you have some thin features on the next layer, like letters. Set this setting to 0 to remove these artifacts. (mm or %)</td>
+<td>default: 100%</td>
+</tr>
+<tr>
+<td>Extra perimeters (On overhangs)</td>
+<td>extra_perimeters_on_overhangs</td>
+<td>--extra-perimeters-on-overhangs</td>
+<td>Detect overhang areas where bridges cannot be anchored, and fill them with extra perimeter paths. These paths are anchored to the nearby non-overhang area when possible. If you use this setting, strongly consider also using overhangs_reverse.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Extra perimeters (On even layers)</td>
+<td>extra_perimeters_odd_layers</td>
+<td>--extra-perimeters-odd-layers</td>
+<td>Add one perimeter every even layer (and not on odd layers like the first one). With this, infill is taken into the sandwich and you may be able to reduce drastically the infill/perimeter overlap setting.</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Overlapping external perimeter ()</td>
+<td>thin_perimeters</td>
+<td>--thin-perimeters</td>
+<td>Allow outermost perimeter to overlap itself to avoid the use of thin walls. Note that flow isn't adjusted and so this will result in over-extruding and undefined behavior. 100% means that perimeters can overlap completly on top of each other. 0% will deactivate this setting. Values below 2% don't have any effect. -1% will also deactivate the anti-hysteris checks for external perimeters. (%)</td>
+<td>default: 80%</td>
+</tr>
+<tr>
+<td>Also for all perimiters</td>
+<td>thin_perimeters_all</td>
+<td>--thin-perimeters-all</td>
+<td>Allow all perimeters to overlap, instead of just external ones. 100% means that perimeters can overlap completly on top of each other. 0% will deactivate this setting. Values below 2% don't have any effect. -1% will also deactivate the anti-hysteris checks for internal perimeters. (%)</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Thin Walls</td>
+<td>thin_walls</td>
+<td>--thin-walls</td>
+<td>Detect single-width walls (parts where two extrusions don't fit and we need to collapse them into a single trace). If unchecked, Slic3r may try to fit perimeters where it's not possible, creating some overlap leading to over-extrusion.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Thin Walls (Min width)</td>
+<td>thin_walls_min_width</td>
+<td>--thin-walls-min-width</td>
+<td>Minimum width for the extrusion to be extruded (widths lower than the nozzle diameter will be over-extruded at the nozzle diameter). If expressed as percentage (for example 110%) it will be computed over nozzle diameter. The<br>default behavior of PrusaSlicer is with a 33% value. Put 100% to avoid any sort of over-extrusion.</td>
+<td>(default: 33%)</td>
+</tr>
+<tr>
+<td>Thin Walls (Overlap)</td>
+<td>thin_walls_overlap</td>
+<td>--thin-walls-overlap</td>
+<td>Overlap between the thin wall and the perimeters. Can be a % of the external perimeter width (default 50%)</td>
+<td>(default: 50%)</td>
+</tr>
+<tr>
+<td>Thin Walls (Merging with perimeters)</td>
+<td>thin_walls_merge</td>
+<td>--thin-walls-merge</td>
+<td>Allow the external perimeter to merge the thin walls in the path. You can  deactivate this if you are using thin walls as a custom support, to reduce adhesion a little.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Perimeter Direction (Default)</td>
+<td>perimeter_direction</td>
+<td>--perimeter-direction</td>
+<td>Default direction to print the perimeters (contours and holes): clockwise (CW) or counter-clockwise (CCW). (ccw_cw, ccw_ccw, cw_ccw, cw_cw)</td>
+<td>default: ccw_cw0</td>
+</tr>
+<tr>
+<td>Perimeter Direction (Reverse on even layers)</td>
+<td>perimeter_reverse</td>
+<td>--perimeter-reverse</td>
+<td>On even layers, all perimeter loops are reversed (it disables the overhang reversal, so it doesn't double-reverse).That setting will likely create defects on the perimeters, so it's only useful is for materials that have some direction-dependent properties (stress lines).</td>
+<td>default: false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="avoid-crossing-perimeters">Avoid Crossing Perimeters</h2>
+<p><img alt="image Avoid crossing perimeters" src="../assets/avoid_crossing_perimeters.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activate</td>
+<td>avoid_crossing_perimeters</td>
+<td>--avoid-crossing-perimeters</td>
+<td>Optimize travel moves in order to minimize the crossing of perimeters. This is mostly useful with Bowden extruders which suffer from oozing. This feature slows down both the print and the G-code generation.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Avoid crossing perimeters - Max detour length</td>
+<td>avoid_crossing_perimeters_max_detour</td>
+<td>--avoid-crossing-perimeters-max-detour</td>
+<td>The maximum detour length for avoid crossing perimeters. If the detour is longer than this value, avoid crossing perimeters is not applied for this travel path. Detour length can be specified either as an absolute value or as percentage (for example 50%) of a direct travel path. (mm or %) (zero to disable)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Modifiers (Not on first layer)</td>
+<td>avoid_crossing_not_first_layer</td>
+<td>--avoid-crossing-not-first-layer</td>
+<td>Disable 'Avoid crossing perimeters' for the first layer.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Modifiers (Avoid top surface for travels)</td>
+<td>avoid_crossing_top</td>
+<td>--avoid-crossing-top</td>
+<td>When using 'Avoid crossing perimeters', consider the top surfaces as a void, to avoid travelling over them if possible.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Avoid crossing curled overhangs (experimental)</td>
+<td>avoid_crossing_curled_overhangs</td>
+<td>--avoid-crossing-curled-overhangs</td>
+<td>Plan travel moves such that the extruder avoids areas where the filament may be curled up. This is mostly happening on steeper rounded overhangs and may cause a crash with the nozzle. This feature slows down both the print and the G-code generation.</td>
+<td>default: false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="overhangs">Overhangs</h2>
+<p><img alt="image Overhangs" src="../assets/overhangs.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activate (threshold) for Bridge speed and fan</td>
+<td>overhangs_width_speed</td>
+<td>--overhangs-width-speed</td>
+<td>Minimum unsupported width for an extrusion to apply the bridge fan &amp; overhang speed to it. Can be in mm or in a % of the nozzle diameter. Can be overriden by the overhang flow threshold if its value lower than this threshold. If dynamic speed is used, then the dynamic speed will be computed between 0% and this threshold. (mm or %)</td>
+<td>default: 55%</td>
+</tr>
+<tr>
+<td>Activate (threshold) for Bridge flow</td>
+<td>overhangs_width</td>
+<td>--overhangs-width</td>
+<td>Minimum unsupported width for an extrusion to apply the overhang bridge flow to it. Can be in mm or in a % of the nozzle diameter. If lower than the threshold for overhangs speed, then this threshold is used for both. If dynamic speed is used, and the overhangs speed threshold isn't enabled or is higher than this one, then the dynamic speed will be computed between 0% and this threshold. (mm or %)</td>
+<td>default: 75%</td>
+</tr>
+<tr>
+<td>Enforce overhangs speed</td>
+<td>overhangs_speed_enforce</td>
+<td>--overhangs-speed-enforce</td>
+<td>Set the speed of the full perimeters to the overhang speed, and also the next one(s) if any. Set to 0 to disable. Set to 1 to set the overhang speed to the full perimeter if there is any overhang detected inside it. Set to more than 1 to also set the overhang speed to the next perimeter(s) (only in classic mode). (perimeters)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Extrusion direction - Reverse on even</td>
+<td>overhangs_reverse</td>
+<td>--overhangs-reverse</td>
+<td>Extrude perimeters that have an overhanging part in the reverse direction on even layers (not on odd layers like the first one). This alternating pattern can significantly improve steep overhangs. !! this is a very slow algorithm !!</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Extrusion direction - Reverse threshold</td>
+<td>overhangs_reverse_threshold</td>
+<td>--overhangs-reverse-threshold</td>
+<td>Number of mm the overhang need to be for the reversal to be considered useful. Can be a % of the perimeter width. (%)</td>
+<td>default: 250%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seam">Seam</h2>
+<p><img alt="image Seam" src="../assets/seam.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seam position</td>
+<td>seam_position</td>
+<td>--seam-position</td>
+<td>Position of perimeters' starting points. Cost-based option let you choose the angle and travel cost. A high angle cost will place the seam where it can be hidden by a corner, the travel cost place the seam near the last position (often at the end of the previous infill). Default is 60 % and 100 %. There is also the visibility and the overhang cost, but they are static. Scattered: seam is placed at a random position on external perimeters Random: seam is placed at a random position for all perimeters Aligned: seams are grouped in the best place possible (minimum 6 layers per group) Contiguous: seam is placed over a seam from the previous layer (useful with enforcers) Rear: seam is placed at the far side (highest Y coordinates) (cost, random, allrandom, aligned, contiguous, rear)</td>
+<td>default: cost</td>
+</tr>
+<tr>
+<td>Angle cost</td>
+<td>seam_angle_cost</td>
+<td>--seam-angle-cost</td>
+<td>Cost of placing the seam at a bad angle. The worst angle (max penalty) is when it's flat. 100% is the default penalty (%)</td>
+<td>default: 60%</td>
+</tr>
+<tr>
+<td>Travel cost</td>
+<td>seam_travel_cost</td>
+<td>--seam-travel-cost</td>
+<td>Cost of moving the extruder. The highest penalty is when the point is the furthest from the position of the extruder before extruding the external perimeter (%)</td>
+<td>default: 100%</td>
+</tr>
+<tr>
+<td>use visibility check</td>
+<td>seam_visibility</td>
+<td>--seam-visibility</td>
+<td>Check and penalize seams that are the most visible. launch rays to check from how many direction a point is visible. This is a compute-intensive option.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Staggered inner seams</td>
+<td>staggered_inner_seams</td>
+<td>--staggered-inner-seams</td>
+<td>This option causes the inner seams to be shifted backwards based on their depth, forming a zigzag pattern.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Seam notch - for round holes</td>
+<td>seam_notch_inner</td>
+<td>--seam-notch-inner</td>
+<td>In convex holes (circular/oval), it's sometimes very problematic to have a little buldge from the seam. This setting move the seam inside the part, in a little cavity (for all external perimeters in convex holes, unless it's in an overhang). The size of the cavity is in mm or a % of the external perimeter width Set zero to disable. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Seam notch - for round perimeters</td>
+<td>seam_notch_outer</td>
+<td>--seam-notch-outer</td>
+<td>In convex perimeters (circular/oval), it's sometimes very problematic to have a little buldge from the seam. This setting move the seam inside the part, in a little cavity (for all external perimeters if the path is convex, unless it's in an overhang). The size of the cavity is in mm or a % of the external perimeter width Set zero to disable. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Seam notch - for everything</td>
+<td>seam_notch_all</td>
+<td>--seam-notch-all</td>
+<td>It's sometimes very problematic to have a little buldge from the seam. This setting move the seam inside the part, in a little cavity (for every seams in external perimeters, unless it's in an overhang). The size of the cavity is in mm or a % of the external perimeter width. It's overriden by the two other 'seam<br>notch' setting when applicable. Set zero to disable. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Seam notch - max angle</td>
+<td>seam_notch_angle</td>
+<td>--seam-notch-angle</td>
+<td>If the (external) angle at the seam is higher than this value, then no notch will be set. If the angle is too high, there isn't enough room for the notch. Can't be lower than 180° or it filters everything. At 360, it allows everything. (°)</td>
+<td>default: 250</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gap-fill">Gap Fill</h2>
+<p><img alt="image Gap Fill" src="../assets/gap_fill.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gap FIll</td>
+<td>gap_fill_enabled</td>
+<td>--gap-fill-enabled</td>
+<td>Enable gap fill algorithm. It will extrude small lines between perimeters when there is not enough space for another perimeter or an infill.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Gap Fill - after last perimeter</td>
+<td>gap_fill_last</td>
+<td>--gap-fill-last</td>
+<td>All gaps, between the last perimeter and the infill, which are thinner than a perimeter will be filled by gap fill.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Extension</td>
+<td>gap_fill_extension</td>
+<td>--gap-fill-extension</td>
+<td>Increase the length of all gap fills by this amount (may over extrude a little bit) Can be a % of the extrusion width Is also used by infill's gap fill. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Gap Fill threashold - Min width</td>
+<td>gap_fill_min_width</td>
+<td>--gap-fill-min-width</td>
+<td>This setting represents the minimum width of a gapfill. Points thinner than this threshold won't be created. Can be a % of the extrusion width 0 to auto Is also used by infill's gapfill. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Gap Fill threashold - Max width</td>
+<td>gap_fill_max_width</td>
+<td>--gap-fill-max-width</td>
+<td>This setting represents the maximum width of a gapfill. Points wider than this threshold won't be created. Can be a % of the extrusion width 0 to auto Is also used by infill's gapfill. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+<tr>
+<td>Gap Fill threashold - Min surface</td>
+<td>gap_fill_min_area</td>
+<td>--gap-fill-min-area</td>
+<td>This setting represents the minimum mm² for a gapfill extrusion to be created. Can be a % of (extrusion width)² Is also used by infill's gapfill. (mm² or %)</td>
+<td>default: 100%</td>
+</tr>
+<tr>
+<td>Gap Fill threashold - Min length</td>
+<td>gap_fill_min_length</td>
+<td>--gap-fill-min-length</td>
+<td>This setting represents the minimum mm for a gapfill extrusion to be extruded. Can be a % of the extrusion width 0 to auto Is also used by infill's gapfill. (mm or %)</td>
+<td>default: 0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="advanced">Advanced</h2>
+<p><img alt="image Advanced" src="../assets/advanced.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No perimeters on bridge areas</td>
+<td>no_perimeter_unsupported_algo</td>
+<td>--no-perimeter-unsupported-algo</td>
+<td>Experimental option to remove perimeters where there is nothing under them and where a bridged infill should be better. * Remove perimeters: remove the unsupported perimeters, leave the bridge area as-is. * Keep only bridges: remove the perimeters in the bridge areas, keep only bridges that end in solid area. * Keep bridges and overhangs: remove the unsupported perimeters, keep only bridges that end in solid area, fill the rest with overhang perimeters+bridges. * Fill the voids with bridges: remove the unsupported perimeters, draw bridges over the whole hole. * !! this one can escalate to problems with overhangs shaped like /\, so you should use it only on one layer at a time via the height-range modifier!!! Computationally intensive!!. (none, noperi, bridges, bridgesoverhangs, filled)</td>
+<td>default: none</td>
+</tr>
+<tr>
+<td>One-loop perimeters</td>
+<td>perimeter_loop</td>
+<td>--perimeter-loop</td>
+<td>Join the perimeters to create only one continuous extrusion without any z-hop. Long inside travel (from external to holes) are not extruded to give some space to the infill.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>One-loop perimeters - Seam</td>
+<td>perimeter_loop_seam</td>
+<td>--perimeter-loop-seam</td>
+<td>Position of perimeters starting points. (nearest, rear)</td>
+<td>default: rear</td>
+</tr>
+<tr>
+<td>Round corners</td>
+<td>perimeter_round_corners</td>
+<td>--perimeter-round-corners</td>
+<td>Internal perimeters will go around sharp corners by turning around instead of making the same sharp corner. This can help when there are visible holes in sharp corners on internal perimeters. Can incur some more processing time, and corners are a bit less sharp.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Fuzzy skin (experimental)</td>
+<td>fuzzy_skin</td>
+<td>--fuzzy-skin</td>
+<td>Fuzzy skin type. (none, external, shell, all)</td>
+<td>default: none</td>
+</tr>
+<tr>
+<td>Fuzzy skin thickness</td>
+<td>fuzzy_skin_thickness</td>
+<td>--fuzzy-skin-thickness</td>
+<td>The maximum distance that each skin point can be offset (both ways), measured perpendicular to the perimeter wall. Can be a % of the nozzle diameter. (mm or %)</td>
+<td>default: 150%</td>
+</tr>
+<tr>
+<td>Fuzzy skin point distance</td>
+<td>fuzzy_skin_point_dist</td>
+<td>--fuzzy-skin-point-dist</td>
+<td>Perimeters will be split into multiple segments by inserting Fuzzy skin points. Lowering the Fuzzy skin point distance will increase the number of randomly offset points on the perimeter wall. Can be a % of the nozzle diameter. (mm or %)</td>
+<td>default: 200%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="external-perimeter-first">External perimeter first</h2>
+<p><img alt="image External perimeter first" src="../assets/external_perimeter_first.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activate</td>
+<td>external_perimeters_first</td>
+<td>--external-perimeters-first</td>
+<td>Print contour perimeters from the outermost one to the innermost one instead of the default inverse order.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>force for all</td>
+<td>external_perimeters_first_force</td>
+<td>--external-perimeters-first-force</td>
+<td>Print all external contours &amp; periemter first, then the internal ones.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Apply on - Only for countours</td>
+<td>external_perimeters_nothole</td>
+<td>--external-perimeters-nothole</td>
+<td>Only do the vase trick on the external side. Useful when the thickness is too low.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>Apply on - Only for holes</td>
+<td>external_perimeters_hole</td>
+<td>--external-perimeters-hole</td>
+<td>Only do the vase trick on the external side. Useful when you only want to remove seam from screw hole.</td>
+<td>default: true</td>
+</tr>
+<tr>
+<td>In vase mode (no seam)</td>
+<td>external_perimeters_vase</td>
+<td>--external-perimeters-vase</td>
+<td>Print contour perimeters in two circles, in a continuous way, like for a vase mode. It needs the external_perimeters_first parameter to work. Doesn't work for the first layer, as it may damage the bed overwise. Note that it will use min_layer_height from your hardware setting as the base height (it doesn't start at 0), so be sure to put here the lowest value your printer can handle. if it's not lower than two times the current layer height, it falls back to the normal algorithm, as there is not enough room to do two loops.</td>
+<td>default: false</td>
+</tr>
+<tr>
+<td>Better bonding</td>
+<td>perimeter_bonding</td>
+<td>--perimeter-bonding</td>
+<td>This setting may slightly degrade the quality of your external perimeter, in exchange for a better bonding between perimeters.Use it if you have great difficulties with perimeter bonding, for example with high temperature filaments. This percentage is the % of overlap between perimeters, a bit like perimeter_overlap and external_perimeter_overlap, but in reverse. You have to set perimeter_overlap and external_perimeter_overlap to 100%, or this setting has no effect. 0: no effect, 50%: half of the nozzle will be over an already extruded perimeter while extruding a new one, unless it's an external one). Note: it needs the external and perimeter overlap to be at 100% and to print the external perimeter first. (%)</td>
+<td>default: 0%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="arachne-perimeter-generator-variable-width">Arachne perimeter generator (variable width)</h2>
+<p><img alt="image Arachne perimeter generator" src="../assets/arachne_perimeter_generator.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Parameter Name</th>
+<th>Parameter CLI Flag</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wall Transition - Angle</td>
+<td>wall_transition_angle</td>
+<td>--wall-transition-angle</td>
+<td>When to create transitions between even and odd numbers of perimeters. A wedgeshape with an angle greater than this setting will not have transitions and noperimeters will be printed in the center to fill the remaining space. Reducing this setting reduces the number and length of these center perimeters, but may leave gaps or overextrude. (°)</td>
+<td>default: 10</td>
+</tr>
+<tr>
+<td>Wall Transition - Distance Margin</td>
+<td>wall_transition_filter_deviation</td>
+<td>--wall-transition-filter-deviation</td>
+<td>Prevent transitioning back and forth between one extra perimeter and one less. This margin extends the range of extrusion widths which follow to (Minimum perimeter width - margin, 2 * Minimum perimeter width + margin). Increasing this margin reduces the number of transitions, which reduces the number of extrusion starts/stops and travel time. However, large extrusion width variation can lead to under- or over extrusion problems. If expressed as percentage (for example 25%), it will be computed over nozzle diameter. (mm or %)</td>
+<td>default: 25%</td>
+</tr>
+<tr>
+<td>Wall Transition - Length</td>
+<td>wall_transition_length</td>
+<td>--wall-transition-length</td>
+<td>When transitioning between different numbers of perimeters as the part becomes thinner, a certain amount of space is allotted to split or join the perimeter segments. If expressed as a percentage (for example 100%), it will be computed based on the nozzle diameter. (mm or %)</td>
+<td>default: 100%</td>
+</tr>
+<tr>
+<td>Perimeter distribution count</td>
+<td>wall_distribution_count</td>
+<td>--wall-distribution-count</td>
+<td>The number of perimeters, counted from the center, over which the variation needs to be spread. Lower values mean that the outer perimeters don't change in width.</td>
+<td>default: 1</td>
+</tr>
+<tr>
+<td>Min feature - Minimum perimeter width</td>
+<td>min_bead_width</td>
+<td>--min-bead-width</td>
+<td>Width of the perimeter that will replace thin features (according to the Minimum feature size) of the model. If the Minimum perimeter width is thinner than the thickness of the feature, the perimeter will become as thick as the feature itself. If expressed as percentage (for example 85%), it will be computed over nozzle diameter. (mm or %)</td>
+<td>default: 85%</td>
+</tr>
+<tr>
+<td>Min feature - Minimum feature size</td>
+<td>min_feature_size</td>
+<td>--min-feature-size</td>
+<td>Minimum thickness of thin features. Model features that are thinner than this value will not be printed, while features thicker than the Minimum feature size will be widened to the Minimum perimeter width. If expressed as a percentage (for example 25%), it will be computed based on the nozzle diameter. (mm or %)</td>
+<td>default: 25%</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Index">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Index
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../slicing/" class="md-footer__link md-footer__link--next" aria-label="Next: Slicing">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Slicing
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      SuperSlicer is released under the GNU Affero General Public License – V:3.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Sb6pekEKQh" target="_blank" rel="noopener" title="SuperSlicer Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/supermerill/SuperSlicer/" target="_blank" rel="noopener" title="SuperSlicer Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.indexes", "navigation.top", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
